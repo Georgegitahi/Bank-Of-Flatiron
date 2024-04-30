@@ -7,7 +7,7 @@ function TransactionsList() {
 
   useEffect(()=>{
 
-    fetch('http://localhost:8001/transactions')
+    fetch('https://bank-of-flatiron-1-bv3j.onrender.com/transactions')
       .then((response) => response.json())
       .then((data) => {
 
@@ -18,7 +18,7 @@ function TransactionsList() {
   }, [])
   //delete
   const handleDelete = (id) =>{
-    fetch (`http://localhost:8001/transactions/${id}`,{
+    fetch (`https://bank-of-flatiron-1-bv3j.onrender.com/transactions/${id}`,{
       method:'DELETE',
     })
     .then((response) => response.json())
